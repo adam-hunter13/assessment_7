@@ -1,0 +1,83 @@
+***** Step 1 *****
+
+Continuous Integration: Jenkins
+Convincing topics:
+Local application
+Completely free
+Workflow customization
+A lot features and plugins available
+Easy installation thanks to the pre-installed OS X, Unix and Windows packages
+Made by developers for developers
+A well-established product with an excellent reputation
+ 
+Getting started:
+A machine with 
+256 MB of RAM - 2GB recommended
+10 GB of drive space
+Software install
+Java 9 or 11
+Docker
+
+Download and run Jenkins
+1. Download Jenkins
+2. Open up terminal in the download directory
+3. Run java -jar jenkins.war --httpPort=8000
+4. Browse to http://localhost:8000
+5. Follow the instructions to complete the installatioin.
+History: 
+Jenkins emerged in 2011 from a program called Hudson that started in 2005.
+Earliest github repo was from 2011, and as recent as 9:17am MST 10/29/2021
+ 
+ 
+Real Time Error Monitoring: Raygun
+ 
+Convincing topics:
+See the exact line of code that caused an error
+Monitor deployments to determine what caused a spike or decrease in error count
+Full stack trace information and diagnostic details for every error occurrence or crash
+Filter through your errors by date, time, version, tag, host, OS, browser, custom tags, and more
+Reduce noise with configurable filters for machine name, version, IP address, hostname, and more
+Groups errors by affected users (this also helps reduce noise)
+180-day data retention
+Support for all major languages and frameworks
+Easy setup using lightweight SDKs
+
+Integrations:
+GitHub
+Jira Software
+Slack
+Amazon SQS
+Asana
+Azure DevOps Services
+Getting Started:
+https://raygun.com/documentation/language-guides/javascript/real-user-monitoring/installation/
+Pretty simple instructions
+
+History:
+Raygun is an award-winning application monitoring company for modern software teams.
+Founded in 2007, Raygun is headquartered in Wellington, NZ with additional offices in Seattle.
+Servicing clients such as Coca-Cola, Domino's Pizza, Microsoft and Samsung, Raygun generates 90% of its product revenue from exports and in 2014 successfully raised capital to aggressively grow it’s global customer base.
+ 
+****** Step 2 *******
+tinyArray
+Insert time: 32.708 μs
+Append time: 4.117791 ms
+
+smallArray
+Insert time: 45.625 μs
+Append time: 4.200833 ms
+
+mediumArray
+Insert time: 229.417 μs
+Append time: 4.316792 ms
+
+largeArray
+Insert time: 9.152917 ms
+Append time: 3.574125 ms
+
+extraLargeArray
+Insert time: 1.088126834 s
+Append time: 7.285916 ms 
+
+Read over the results, and write a paragraph that explains the pattern you see. How does each function “scale”? Which of the two functions scales better? How can you tell?
+Overall I would say that the “doublerAppend” function is faster. We can see that the time to perform .push is generally a consistent time. On the other hand you have the “doublerInsert” function that seems to be faster for the first couple arrays  but a lot slower for the larger arrays to perform .unshift. This is because unshift has to generate the array and then shift every index to the right one and then add the new number as index 0. The .push simply generates the array and adds the new number to the end. 
